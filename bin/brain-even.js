@@ -40,32 +40,5 @@ for (let i = 0; i <= 2; i += 1) {
   }
 }
 
-// for (let i = 0; i < 3; i += 1) {
-//   const randomNum = Math.floor(Math.random() * 100);
-//   console.log('Question: ', randomNum);
-//   const answer = readlineSync.question('Your answer: ');
-//   console.log(randomNum, answer);
-
-//   if ((randomNum % 2 !== 0) && (answer === 'yes')) {
-//     console.log("'yes' is wrong answer ;(. Correct answer was 'no'");
-//     console.log(`Let's try again, ${name}`);
-//     break;
-//   } else if ((randomNum % 2 === 0) && (answer === 'no')) {
-//     console.log("'no' is wrong answer ;(. Correct answer was 'yes'");
-//     console.log(`Let's try again, ${name} `);
-//     break;
-//   } 
-  
-//   if ((answer !== 'yes') || (answer !== 'no')) {
-//     console.log(`'${answer}' is wrong answer ;(.`);
-//     break;
-//   } 
-//   console.log('Correct!');
-  
-//   if (i === 2) {
-//   console.log(`Congratulations, ${name}!`);
-//   }
-// }
-
 
 
