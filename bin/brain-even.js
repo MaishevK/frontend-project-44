@@ -35,7 +35,7 @@ const checkCorrect = (userAnswer, correctAnswer, notCorrectAnswer, name) => {
 
 const playThreeRounds = (name) => {
   for (let i = 0; i <= 2; i += 1) {
-    const isCorrect = gameRound();
+    const isCorrect = playRound();
   
     if(!isCorrect) {
       break;
@@ -50,7 +50,7 @@ const playThreeRounds = (name) => {
 const getNumber = () => Math.floor(Math.random() * 100);
 const isEven = (number) => !(number % 2);
 
-const gameRound = () => {
+const playRound = () => {
   const number = getNumber();
   writeQuestion(number);
   const userAnswer = writeAnswer();
