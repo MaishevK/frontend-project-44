@@ -3,14 +3,25 @@
 import readlineSync from 'readline-sync';
 import ReadLine from '../src/cli.js';
 
-const getNumber = () => Math.floor(Math.random() * 100);
-const isEven = (number) => !(number % 2);
-const gameRound = () => {
-  const number = getNumber();
-  console.log('Question: ', number);
-  const userAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = isEven(number) ? 'yes' : 'no';
-  const notCorrectAnswer = !isEven(number) ? 'yes' : 'no';
+//common functions
+const writeGameName = (text) => {
+  console.log(text);
+};
+
+const writeExercise = (text) => {
+  console.log(text);
+};
+
+const writeQuestion = (data) => {
+  console.log('Question: ', data);
+};
+
+const writeAnswer = () => {
+   const data = readlineSync.question('Your answer: ');
+   return data;
+};
+
+const checkCorrect = (userAnswer, correctAnswer, notCorrectAnswer, name) => {
   if (userAnswer.toLowerCase() === correctAnswer) {
     console.log('Correct!');
     return true;
@@ -22,23 +33,41 @@ const gameRound = () => {
   return false;
 };
 
-console.log('brain-even\n');
+const playThreeRounds = (name) => {
+  for (let i = 0; i <= 2; i += 1) {
+    const isCorrect = gameRound();
+  
+    if(!isCorrect) {
+      break;
+    }
+  
+    if (i === 2) {
+      console.log(`Congratulations, ${name}!`);
+    }
+  }
+};
+
+const getNumber = () => Math.floor(Math.random() * 100);
+const isEven = (number) => !(number % 2);
+
+const gameRound = () => {
+  const number = getNumber();
+  writeQuestion(number);
+  const userAnswer = writeAnswer();
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  const notCorrectAnswer = !isEven(number) ? 'yes' : 'no';
+
+  return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
+};
+//--------
+
+writeGameName('brain-even\n');
 
 const name = ReadLine();
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+writeExercise('Answer "yes" if the number is even, otherwise answer "no".');
 
-for (let i = 0; i <= 2; i += 1) {
-  const isCorrect = gameRound();
-
-  if(!isCorrect) {
-    break;
-  }
-
-  if (i === 2) {
-    console.log(`Congratulations, ${name}!`);
-  }
-}
+playThreeRounds(name);
 
 
 
