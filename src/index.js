@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import { playRound } from './games/even.js';
 
 const writeGameName = (text) => {
     console.log(text);
@@ -30,9 +29,8 @@ console.log(`'${userAnswer}' is wrong answer ;(.\nLet's try again, ${name}!`);
 return false;
 };
 
-const playThreeRounds = (name) => {
+const playThreeRounds = (name, isCorrect) => {
 for (let i = 0; i <= 2; i += 1) {
-    const isCorrect = playRound();
 
     if(!isCorrect) {
     break;
