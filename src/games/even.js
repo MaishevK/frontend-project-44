@@ -6,16 +6,14 @@ const isEven = (number) => !(number % 2);
 let name = '';
 
 const playRound = () => {
-  const number = getNumber();
-  writeQuestion(number);
-  const userAnswer = writeAnswer().toLowerCase();
-  const correctAnswer = (isEven(number) ? 'yes' : 'no').toLowerCase();
-  const notCorrectAnswer = !isEven(number) ? 'yes' : 'no';
+    const number = getNumber();
+    writeQuestion(number);
+    const userAnswer = writeAnswer().toLowerCase();
+    const correctAnswer = (isEven(number) ? 'yes' : 'no').toLowerCase();
+    const notCorrectAnswer = !isEven(number) ? 'yes' : 'no';
 
-  return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
+    return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
 };
-
-
 
 const brainEven = () => {
     writeGameName('brain-even\n');
@@ -23,8 +21,8 @@ const brainEven = () => {
     name = ReadLine();
 
     writeExercise('Answer "yes" if the number is even, otherwise answer "no".');
-    const isCorrect = playRound();
-    playThreeRounds(name, isCorrect);
+    
+    playThreeRounds(name, playRound);
 }
 
 export { brainEven };
