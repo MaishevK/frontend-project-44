@@ -32,7 +32,7 @@ const playRound = () => {
     getSecondNum = getNumber();
     getOperator();
     writeQuestion(`${getFirstNum} ${operatorString} ${getSecondNum}`);
-    const userAnswer = Number(writeAnswer());
+    const userAnswer = Number(writeAnswer()) || '';
     correctAnswer = result;
     const notCorrectAnswer = userAnswer;
 
