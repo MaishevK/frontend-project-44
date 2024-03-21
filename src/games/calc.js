@@ -21,7 +21,7 @@ const getOperator = () => {
         return; 
     }
         operatorString = '-';
-        correctAnswer = getFirstNum - getSecondNum;
+        result = getFirstNum - getSecondNum;
         return;
 };
 
