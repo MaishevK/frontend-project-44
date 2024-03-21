@@ -15,14 +15,16 @@ const playRound = () => {
   return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
 };
 
+
+
 const brainEven = () => {
     writeGameName('brain-even\n');
 
     name = ReadLine();
 
     writeExercise('Answer "yes" if the number is even, otherwise answer "no".');
-
-    playThreeRounds(name);
+    const isCorrect = playRound();
+    playThreeRounds(name, isCorrect);
 }
 
-export { brainEven, playRound };
+export { brainEven };
