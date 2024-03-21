@@ -29,17 +29,17 @@ console.log(`'${userAnswer}' is wrong answer ;(.\nLet's try again, ${name}!`);
 return false;
 };
 
-const playThreeRounds = (name, isCorrect) => {
-for (let i = 0; i <= 2; i += 1) {
+const playThreeRounds = (name, playRound) => {
+    for (let i = 0; i <= 2; i += 1) {
+        const isCorrect = playRound();
 
-    if(!isCorrect) {
-    break;
+        if(!isCorrect) {
+        break;
+        }
+        if (i === 2) {
+        console.log(`Congratulations, ${name}!`);
+        }
     }
-
-    if (i === 2) {
-    console.log(`Congratulations, ${name}!`);
-    }
-}
 };
 
   export { writeGameName, writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds };
