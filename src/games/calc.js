@@ -11,11 +11,11 @@ const getNumber = () => Math.floor(Math.random() * 100);
 
 const getOperator = () => {
     const num = getNumber();
-    if (num <= 3) {
+    if (num <= 33) {
         operatorString = '+';
         result = getFirstNum + getSecondNum;
         return ;
-    } else if (num > 6) {
+    } else if (num > 66) {
         operatorString = '*';
         result = getFirstNum * getSecondNum;
         return; 
