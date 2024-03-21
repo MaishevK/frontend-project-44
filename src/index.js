@@ -19,10 +19,10 @@ const writeAnswer = () => {
 };
 
 const checkCorrect = (userAnswer, correctAnswer, notCorrectAnswer, name) => {
-if (userAnswer.toLowerCase() === correctAnswer) {
+if (userAnswer === correctAnswer) {
     console.log('Correct!');
     return true;
-} else if (userAnswer.toLowerCase() === notCorrectAnswer) {
+} else if (userAnswer === notCorrectAnswer) {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
     return false;
 }
