@@ -7,3 +7,6 @@ https://asciinema.org/a/VrSr2Eaijrk7Brjgkpz3bbKbr
 
 See recorded session according to step 6 of game:
 https://asciinema.org/a/OcbNrEqxP43TfPWcGDExU2WjX
+
+See recorded session according to step 7 of game:
+https://asciinema.org/a/3Q9V8HqJ93YLKo6PhhX6Lvnrj
