@@ -1,5 +1,5 @@
 import ReadLine from '../cli.js';
-import { writeGameName, writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds } from '../index.js'
+import { writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds } from '../index.js'
 
 let getFirstNum = 0;
 let getSecondNum = 0;
@@ -42,8 +42,6 @@ const playRound = () => {
 };
 
 const brainGcd = () => {
-    writeGameName('brain-gcd\n');
-
     name = ReadLine();
 
     writeExercise('Find the greatest common divisor of given numbers.');
