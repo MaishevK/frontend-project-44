@@ -1,9 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const writeGameName = (text) => {
-    console.log(text);
-};
-  
+ 
 const writeExercise = (text) => {
 console.log(text);
 };
@@ -42,4 +39,4 @@ const playThreeRounds = (name, playRound) => {
     }
 };
 
-  export { writeGameName, writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds };
+  export { writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds };
