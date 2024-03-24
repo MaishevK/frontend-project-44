@@ -7,7 +7,8 @@
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
-    "brain-progression": "bin/brain-progression.js"
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
   },
   "description": "[![Actions Status](https://github.com/MaishevK/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MaishevK/frontend-project-44/actions)",
   "main": "index.js",
@@ -26,5 +27,8 @@
   "homepage": "https://github.com/MaishevK/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
   }
 }
