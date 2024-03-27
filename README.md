@@ -51,7 +51,7 @@ brain-progression
 brain-prime
 ```
 
-See recorded session according to step 5 of game "brain-even": [link](https://asciinema.org/a/VrSr2Eaijrk7Brjgkpz3bbKbr)
+See recorded session according to step 5 of game "brain-even": [link](https://asciinema.org/a/8XvR5RE2Wkq8F9byKgZKJ9XiR)
 
 See recorded session according to step 6 of game "brain-calc": [link](https://asciinema.org/a/OcbNrEqxP43TfPWcGDExU2WjX)
 
