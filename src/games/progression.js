@@ -26,21 +26,19 @@ const playRound = () => {
   const getProgStart = getRandomInt(0, 20);
   const getProgStep = getRandomInt(1, 10);
   const progArray = getProgressionArray(getProgLength, getProgStart, getProgStep);
-  let progArrayString = '';
+
   const getElemPosition = Math.floor(getRandomInt(1, getProgLength));
   // console.log('length= ', getProgLength, 'position= ', getElemPosition);
-
+  const innerArray = [...progArray];
+  // fix symbol to '..' according to getElemPosition
   for (let i = 0; i < getProgLength; i += 1) {
     // console.log('i= ', i);
-    if (progArray[i] === progArray[getElemPosition]) {
-    // console.log('i\'s value= ', progArray[i]);
-    // console.log('position\'s value= ', progArray[getElemPosition], 'array=', progArray);
-
-      progArrayString += ' ..';
-    } else {
-      progArrayString += progArray[i];
+    if (innerArray[i] === innerArray[getElemPosition]) {
+      innerArray[i] = '..';
     }
   }
+  // converting array from string
+  const progArrayString = innerArray.join(' ');
 
   writeQuestion(progArrayString);
   const innerValue = writeAnswer();
