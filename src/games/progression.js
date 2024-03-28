@@ -38,7 +38,7 @@ const playRound = () => {
 
       progArrayString += ' ..';
     } else {
-      progArrayString = `${progArrayString} ${progArray[i]}`;
+      progArrayString += progArray[i];
     }
   }
 
