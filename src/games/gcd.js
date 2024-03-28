@@ -37,7 +37,7 @@ const getGcd = (first, second) => {
 const playRound = () => {
   getFirstNum = getNumber();
   getSecondNum = getNumber();
-  writeQuestion(`${getFirstNum}  ${getSecondNum}`);
+  writeQuestion(`${getFirstNum} ${getSecondNum}`);
   const innerValue = writeAnswer();
   const userAnswer = Number(innerValue) || innerValue || '';
   correctAnswer = getGcd(getFirstNum, getSecondNum);
