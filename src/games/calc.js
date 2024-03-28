@@ -44,7 +44,7 @@ const playRound = () => {
     userAnswer = Number(innerValue);
   } else {
     userAnswer = Number(innerValue) || innerValue || '';
-  };
+  }
 
   correctAnswer = result;
   const notCorrectAnswer = userAnswer;
