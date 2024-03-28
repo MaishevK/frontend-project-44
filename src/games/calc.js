@@ -8,6 +8,7 @@ let getSecondNum = 0;
 let operatorString = '';
 let result = 0;
 let correctAnswer = 0;
+let userAnswer = 0;
 
 const getNumber = () => Math.floor(Math.random() * 100);
 
@@ -38,7 +39,13 @@ const playRound = () => {
   getOperator();
   writeQuestion(`${getFirstNum} ${operatorString} ${getSecondNum}`);
   const innerValue = writeAnswer();
-  const userAnswer = Number(innerValue) || innerValue || '';
+
+  if (innerValue === '0') {
+    userAnswer = Number(innerValue);
+  } else {
+    userAnswer = Number(innerValue) || innerValue || '';
+  };
+
   correctAnswer = result;
   const notCorrectAnswer = userAnswer;
 
