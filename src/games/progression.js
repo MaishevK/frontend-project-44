@@ -36,9 +36,9 @@ const playRound = () => {
     // console.log('i\'s value= ', progArray[i]);
     // console.log('position\'s value= ', progArray[getElemPosition], 'array=', progArray);
 
-      progArrayString += '.. ';
+      progArrayString += '..';
     } else {
-      progArrayString = `${progArrayString} ${progArray[i]} `;
+      progArrayString = `${progArrayString} ${progArray[i]}`;
     }
   }
 
