@@ -9,7 +9,7 @@ let name = '';
 
 const playRound = () => {
   const number = getNumber();
-  writeQuestion(number);
+  writeQuestion(number.toString());
   const userAnswer = writeAnswer().toLowerCase();
   const correctAnswer = (isEven(number) ? 'yes' : 'no').toLowerCase();
   const notCorrectAnswer = !isEven(number) ? 'yes' : 'no';
