@@ -5,7 +5,7 @@ const writeExercise = (text) => {
 };
 
 const writeQuestion = (data) => {
-  console.log('Question: ', data);
+  console.log('Question:', data);
 };
 
 const writeAnswer = () => {
