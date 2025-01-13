@@ -1,5 +1,6 @@
+import ReadLine from '../cli.js';
 import {
-  readLineInGames, writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds,
+  writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds,
 } from '../index.js';
 
 const getNumber = () => Math.floor(Math.random() * 100);
@@ -17,7 +18,7 @@ const playRound = () => {
 };
 
 const brainEven = () => {
-  name =readLineInGames();
+  name = ReadLine();
 
   writeExercise('Answer "yes" if the number is even, otherwise answer "no".');
   playThreeRounds(name, playRound);
