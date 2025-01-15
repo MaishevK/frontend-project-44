@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import ReadLine from '../cli.js';
 import playThreeRounds from '../index.js';
 
 let name = '';
@@ -42,9 +41,12 @@ const playRound = () => {
 };
 
 const brainPrime = () => {
-  name = ReadLine();
+  console.log('Welcome to the Brain Games!');
+  name = readlineSync.question('May I have your name? ');
 
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+
   playThreeRounds(name, playRound);
 };
 
