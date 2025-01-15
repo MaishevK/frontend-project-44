@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import ReadLine from '../cli.js';
 import playThreeRounds from '../index.js';
 
 const getNumber = () => Math.floor(Math.random() * 100);
@@ -26,9 +25,13 @@ const playRound = () => {
 };
 
 const brainEven = () => {
-  name = ReadLine();
+  console.log('Welcome to the Brain Games!');
 
+  name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
   playThreeRounds(name, playRound);
 };
 
