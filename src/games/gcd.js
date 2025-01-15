@@ -1,7 +1,6 @@
+import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import {
-  writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds,
-} from '../index.js';
+import { playThreeRounds, } from '../index.js';
 
 let getFirstNum = 0;
 let getSecondNum = 0;
@@ -37,19 +36,28 @@ const getGcd = (first, second) => {
 const playRound = () => {
   getFirstNum = getNumber();
   getSecondNum = getNumber();
-  writeQuestion(`${getFirstNum} ${getSecondNum}`);
-  const innerValue = writeAnswer();
+  console.log(`${getFirstNum} ${getSecondNum}`);
+  const innerValue = readlineSync.question('Your answer: ');
   const userAnswer = Number(innerValue) || innerValue || '';
   correctAnswer = getGcd(getFirstNum, getSecondNum);
   const notCorrectAnswer = userAnswer;
 
-  return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+  if (userAnswer === notCorrectAnswer) {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+    return false;
+  }
+  console.log(`'${userAnswer}' is wrong answer ;(.\nLet's try again, ${name}!`);
+  return false;
 };
 
 const brainGcd = () => {
   name = ReadLine();
 
-  writeExercise('Find the greatest common divisor of given numbers.');
+  console.log('Find the greatest common divisor of given numbers.');
   playThreeRounds(name, playRound);
 };
 
