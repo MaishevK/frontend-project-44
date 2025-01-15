@@ -1,7 +1,6 @@
+import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import {
-  writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds,
-} from '../index.js';
+import { playThreeRounds, } from '../index.js';
 
 let name = '';
 
@@ -40,19 +39,28 @@ const playRound = () => {
   // converting array from string
   const progArrayString = innerArray.join(' ');
 
-  writeQuestion(progArrayString);
-  const innerValue = writeAnswer();
+  console.log(progArrayString);
+  const innerValue = readlineSync.question('Your answer: ');;
   const userAnswer = Number(innerValue) || innerValue || '';
   const correctAnswer = progArray[getElemPosition];
   const notCorrectAnswer = userAnswer;
 
-  return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+  if (userAnswer === notCorrectAnswer) {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+    return false;
+  }
+  console.log(`'${userAnswer}' is wrong answer ;(.\nLet's try again, ${name}!`);
+  return false;
 };
 
 const brainProgression = () => {
   name = ReadLine();
 
-  writeExercise('What number is missing in the progression?');
+  console.log('What number is missing in the progression?');
   playThreeRounds(name, playRound);
 };
 
