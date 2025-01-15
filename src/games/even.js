@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import { playThreeRounds, } from '../index.js';
+import playThreeRounds from '../index.js';
 
 const getNumber = () => Math.floor(Math.random() * 100);
 const isEven = (number) => !(number % 2);
