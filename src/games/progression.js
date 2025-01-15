@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import { playThreeRounds, } from '../index.js';
+import playThreeRounds from '../index.js';
 
 let name = '';
 
@@ -40,7 +40,7 @@ const playRound = () => {
   const progArrayString = innerArray.join(' ');
 
   console.log(progArrayString);
-  const innerValue = readlineSync.question('Your answer: ');;
+  const innerValue = readlineSync.question('Your answer: ');
   const userAnswer = Number(innerValue) || innerValue || '';
   const correctAnswer = progArray[getElemPosition];
   const notCorrectAnswer = userAnswer;
