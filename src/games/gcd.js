@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 import playThreeRounds from '../index.js';
-import getRandom from '../helper.js';
+import getRandomNumber from '../helper.js';
 
 let getFirstNum = 0;
 let getSecondNum = 0;
 let correctAnswer = 0;
 let name = '';
 
-const getNumber = () => Math.floor(getRandom());
+const getNumber = () => getRandomNumber(0, 100);
 
 const getGcd = (first, second) => {
   if (first % second === 0) {
