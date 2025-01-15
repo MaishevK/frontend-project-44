@@ -1,7 +1,6 @@
+import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import {
-  writeExercise, writeQuestion, writeAnswer, checkCorrect, playThreeRounds,
-} from '../index.js';
+import { playThreeRounds, } from '../index.js';
 
 let name = '';
 
@@ -25,18 +24,27 @@ const isPrimeNum = (num) => {
 
 const playRound = () => {
   const num = getRandomInt(1, 20);
-  writeQuestion(num);
-  const userAnswer = writeAnswer();
+  console.log(num);
+  const userAnswer = readlineSync.question('Your answer: ');;
   const correctAnswer = isPrimeNum(num) ? 'yes' : 'no';
   const notCorrectAnswer = userAnswer;
 
-  return checkCorrect(userAnswer, correctAnswer, notCorrectAnswer, name);
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+  if (userAnswer === notCorrectAnswer) {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+    return false;
+  }
+  console.log(`'${userAnswer}' is wrong answer ;(.\nLet's try again, ${name}!`);
+  return false;
 };
 
 const brainPrime = () => {
   name = ReadLine();
 
-  writeExercise('Answer "yes" if given number is prime. Otherwise answer "no".');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   playThreeRounds(name, playRound);
 };
 
