@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import { playThreeRounds, } from '../index.js';
+import playThreeRounds from '../index.js';
 
 let name = '';
 
@@ -25,7 +25,7 @@ const isPrimeNum = (num) => {
 const playRound = () => {
   const num = getRandomInt(1, 20);
   console.log(num);
-  const userAnswer = readlineSync.question('Your answer: ');;
+  const userAnswer = readlineSync.question('Your answer: ');
   const correctAnswer = isPrimeNum(num) ? 'yes' : 'no';
   const notCorrectAnswer = userAnswer;
 
