@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 import playThreeRounds from '../index.js';
-import getRandom from '../helper.js';
+import getRandomNumber from '../helper.js';
 
-const getNumber = () => Math.floor(getRandom());
+const getNumber = () => getRandomNumber(0, 100);
 const isEven = (number) => (number % 2) === 0;
 let name = '';
 
