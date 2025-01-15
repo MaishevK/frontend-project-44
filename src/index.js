@@ -10,4 +10,4 @@ const playThreeRounds = (name, playRound) => {
   }
 };
 
-export { playThreeRounds, };
+export default playThreeRounds;
