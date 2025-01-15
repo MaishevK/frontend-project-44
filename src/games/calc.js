@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import ReadLine from '../cli.js';
-import { playThreeRounds, } from '../index.js';
+import playThreeRounds from '../index.js';
 
 let getFirstNum = 0;
 let getSecondNum = 0;
