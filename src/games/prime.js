@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
 import playThreeRounds from '../index.js';
+import getRandom from '../helper.js';
 
 let name = '';
 
 const getRandomInt = (min, max) => {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+  return Math.floor(getRandom() / 100 * (maxFloored - minCeiled) + minCeiled);
 };
 
 const isPrimeNum = (num) => {
