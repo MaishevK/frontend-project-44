@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import ReadLine from '../cli.js';
 import playThreeRounds from '../index.js';
 
 let name = '';
@@ -58,9 +57,12 @@ const playRound = () => {
 };
 
 const brainProgression = () => {
-  name = ReadLine();
+  console.log('Welcome to the Brain Games!');
+  name = readlineSync.question('May I have your name? ');
 
+  console.log(`Hello, ${name}!`);
   console.log('What number is missing in the progression?');
+
   playThreeRounds(name, playRound);
 };
 
