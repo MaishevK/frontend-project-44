@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import ReadLine from '../cli.js';
 import playThreeRounds from '../index.js';
 
 let getFirstNum = 0;
@@ -55,9 +54,13 @@ const playRound = () => {
 };
 
 const brainGcd = () => {
-  name = ReadLine();
+  console.log('Welcome to the Brain Games!');
 
+  name = readlineSync.question('May I have your name? ');
+
+  console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
+
   playThreeRounds(name, playRound);
 };
 
