@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import playThreeRounds from '../index.js';
-import getRandom from '../helper.js';
+import getRandomNumber from '../helper.js';
 
 let getFirstNum = 0;
 let getSecondNum = 0;
@@ -9,7 +9,7 @@ let result = 0;
 let correctAnswer = 0;
 let userAnswer = 0;
 
-const getNumber = () => Math.floor(getRandom());
+const getNumber = () => getRandomNumber(0, 100);
 
 const getOperator = () => {
   const num = getNumber();
